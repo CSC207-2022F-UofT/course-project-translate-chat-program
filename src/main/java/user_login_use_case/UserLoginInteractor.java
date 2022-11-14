@@ -1,15 +1,20 @@
 package user_login_use_case;
 
 class UserLoginInteractor implements LoginInputBoundary {
-    private UserLoginGateway auth;
+    private final UserLoginGateway auth;
+    private final LoginOutputBoundary presenter;
 
-    public UserLoginInteractor(UserLoginGateway auth) {
+    public UserLoginInteractor(UserLoginGateway auth, LoginOutputBoundary presenter) {
+        this.presenter = presenter;
         this.auth = auth;
     }
 
     @Override
     public LoginResponse login(LoginData data) {
-        // TODO: Complete Pre/Post-checks cf. paulgries/UserLoginCleanArchitecture
-        return auth.login(data);
+        try {
+            return auth.login(data);
+        } catch (RuntimeException e) {
+            return presenter.prepareFailView(e.getMessage());
+        }
     }
 }

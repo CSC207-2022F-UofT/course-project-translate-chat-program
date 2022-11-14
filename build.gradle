@@ -13,9 +13,7 @@ dependencies {
     implementation 'com.google.cloud:google-cloud-texttospeech:2.6.0'
     implementation 'com.google.cloud:google-cloud-translate:2.5.0'
     implementation 'com.google.cloud:google-cloud-speech:4.0.0'
-
     implementation platform('com.google.cloud:libraries-bom:26.1.4')
-
     implementation 'com.google.cloud:google-cloud-bigquery'
 }
 
