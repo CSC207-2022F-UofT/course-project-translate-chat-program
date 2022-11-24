@@ -1,7 +1,12 @@
-package views;
+package views.screens;
 
 import user_register_use_case.CreationData;
 import user_register_use_case.RegisterResponse;
+import views.Navigator;
+import views.controllers.UserRegisterController;
+import views.styles.AutoFillDropdown;
+import views.styles.HintPasswordField;
+import views.styles.HintTextField;
 
 import javax.swing.*;
 import java.awt.*;

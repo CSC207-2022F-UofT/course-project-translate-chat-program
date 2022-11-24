@@ -1,4 +1,4 @@
-package views;
+package views.controllers;
 
 import entities.Message;
 //import entities.TextMessage;

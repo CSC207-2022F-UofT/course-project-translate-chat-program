@@ -1,4 +1,4 @@
-package views;
+package views.controllers;
 
 import entities.User;
 import profile_customization_use_case.CustomizationData;

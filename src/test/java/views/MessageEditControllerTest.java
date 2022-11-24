@@ -8,6 +8,8 @@ import message_edit_delete_use_case.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import services.DBInitializer;
+import views.controllers.MessageEditController;
+import views.presenters.MessageEditPresenter;
 
 import java.io.FileNotFoundException;
 import java.util.concurrent.ExecutionException;

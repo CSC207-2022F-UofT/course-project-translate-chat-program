@@ -5,6 +5,7 @@ import entities.User;
 import message_edit_delete_use_case.MessageDeleteResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import views.presenters.MessageDeletePresenter;
 
 import java.util.ArrayList;
 import java.util.Date;

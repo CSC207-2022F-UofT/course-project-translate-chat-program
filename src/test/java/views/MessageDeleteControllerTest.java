@@ -8,6 +8,8 @@ import message_edit_delete_use_case.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import services.DBInitializer;
+import views.controllers.MessageDeleteController;
+import views.presenters.MessageDeletePresenter;
 
 import java.io.FileNotFoundException;
 import java.util.List;

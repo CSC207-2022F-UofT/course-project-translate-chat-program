@@ -6,7 +6,7 @@ import com.google.firebase.cloud.FirestoreClient;
 import gateways.MessageEditFirebaseSystem;
 import org.junit.jupiter.api.Test;
 import services.DBInitializer;
-import views.MessageEditPresenter;
+import views.presenters.MessageEditPresenter;
 
 import java.io.FileNotFoundException;
 import java.util.concurrent.ExecutionException;

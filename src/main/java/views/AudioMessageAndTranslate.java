@@ -7,6 +7,10 @@ import gateways.AudioRecorder;
 import gateways.MessageTranslateGoogleCloud;
 import translate_use_case.MessageTranslateInteractor;
 import translate_use_case.MessageTranslatePresenter;
+import views.controllers.AudioConvertController;
+import views.controllers.AudioRecorderController;
+import views.controllers.MessageTranslateController;
+import views.styles.RecordButton;
 
 import java.io.IOException;
 

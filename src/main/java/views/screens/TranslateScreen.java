@@ -1,6 +1,7 @@
-package views;
+package views.screens;
 
 import translate_use_case.MessageTranslateData;
+import views.controllers.MessageTranslateController;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package views;
+package views.styles;
 
 import javax.swing.*;
 import java.awt.event.FocusEvent;
@@ -7,7 +7,7 @@ import java.awt.event.FocusListener;
 /**
  * A text field that displays a given hint text.
  */
-class HintTextField extends JTextField implements FocusListener {
+public class HintTextField extends JTextField implements FocusListener {
 
     private final String hint;
     private boolean showingHint;

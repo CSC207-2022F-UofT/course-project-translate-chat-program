@@ -1,4 +1,4 @@
-package views;
+package views.presenters;
 
 import profile_customization_use_case.CustomizationFailed;
 import profile_customization_use_case.CustomizationOutputBoundary;

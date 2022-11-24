@@ -1,7 +1,11 @@
-package views;
+package views.screens;
 
 import user_login_use_case.LoginData;
 import user_login_use_case.LoginResponse;
+import views.controllers.LoginController;
+import views.Navigator;
+import views.styles.HintPasswordField;
+import views.styles.HintTextField;
 
 import javax.swing.*;
 import java.awt.*;

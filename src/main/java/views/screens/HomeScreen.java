@@ -1,4 +1,6 @@
-package views;
+package views.screens;
+
+import views.Navigator;
 
 import javax.swing.*;
 import java.awt.*;

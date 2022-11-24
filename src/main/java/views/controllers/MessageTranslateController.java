@@ -1,4 +1,4 @@
-package views;
+package views.controllers;
 
 import translate_use_case.MessageTranslateData;
 import translate_use_case.MessageTranslateInputBoundary;

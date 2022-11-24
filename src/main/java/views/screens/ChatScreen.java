@@ -1,4 +1,4 @@
-package views;
+package views.screens;
 
 import entities.Chat;
 import entities.Message;
@@ -16,6 +16,14 @@ import message_search_use_case.MessageSearchOutputBoundary;
 
 import services.DBInitializer;
 import services.DBService;
+import views.presenters.MessageDeletePresenter;
+import views.presenters.MessageEditPresenter;
+import views.presenters.MessageSearchPresenter;
+import views.controllers.MessageDeleteController;
+import views.controllers.MessageEditController;
+import views.controllers.MessageSearchController;
+import views.styles.EditDeletePopupMenu;
+import views.styles.SearchBarPanel;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

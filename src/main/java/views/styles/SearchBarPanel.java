@@ -1,10 +1,11 @@
-package views;
+package views.styles;
 
 
 import entities.Message;
 
 import message_search_use_case.MessageSearchData;
 import message_search_use_case.MessageSearchResponse;
+import views.controllers.MessageSearchController;
 
 
 import javax.swing.*;

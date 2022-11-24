@@ -1,4 +1,4 @@
-package views;
+package views.controllers;
 
 
 import user_register_use_case.CreationData;

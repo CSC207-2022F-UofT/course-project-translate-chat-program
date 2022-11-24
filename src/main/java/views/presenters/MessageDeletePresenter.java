@@ -1,4 +1,4 @@
-package views;
+package views.presenters;
 
 import message_edit_delete_use_case.MessageDeleteOutputBoundary;
 import message_edit_delete_use_case.MessageDeleteResponse;

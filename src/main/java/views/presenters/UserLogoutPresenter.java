@@ -1,6 +1,7 @@
-package views;
+package views.presenters;
 
 import user_logout_use_case.UserLogoutOutputBoundary;
+import views.Navigator;
 
 public class UserLogoutPresenter implements UserLogoutOutputBoundary {
     private final Navigator nav;

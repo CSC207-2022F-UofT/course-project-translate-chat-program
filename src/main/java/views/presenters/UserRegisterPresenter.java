@@ -1,4 +1,4 @@
-package views;
+package views.presenters;
 
 import user_register_use_case.RegisterFailed;
 import user_register_use_case.RegisterResponse;

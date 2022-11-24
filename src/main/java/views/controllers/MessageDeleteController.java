@@ -1,4 +1,4 @@
-package views;
+package views.controllers;
 
 
 import message_edit_delete_use_case.*;

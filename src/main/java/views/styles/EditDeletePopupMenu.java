@@ -1,8 +1,9 @@
-package views;
+package views.styles;
 
 import message_edit_delete_use_case.MessageDeleteData;
 import message_edit_delete_use_case.MessageEditData;
-import org.apache.arrow.flatbuf.Int;
+import views.controllers.MessageDeleteController;
+import views.controllers.MessageEditController;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

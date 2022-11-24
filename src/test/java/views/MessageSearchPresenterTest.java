@@ -2,11 +2,11 @@ package views;
 
 import entities.Message;
 import entities.User;
-import message_search_use_case.MessageSearchData;
 import message_search_use_case.MessageSearchFailed;
 import message_search_use_case.MessageSearchResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import views.presenters.MessageSearchPresenter;
 
 import java.util.ArrayList;
 import java.util.Date;

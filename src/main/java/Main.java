@@ -10,12 +10,18 @@ import user_register_use_case.UserRegistrationGateway;
 import user_register_use_case.UserRegistrationInteractor;
 import views.*;
 import user_register_use_case.UserRegisterInputBoundary;
+import views.controllers.LoginController;
+import views.controllers.UserRegisterController;
+import views.presenters.UserRegisterPresenter;
+import views.screens.ContactScreen;
+import views.screens.HomeScreen;
+import views.screens.LoginScreen;
+import views.screens.RegisterScreen;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.util.HashMap;
-import java.util.concurrent.ExecutionException;
 
 public class Main {
     public static void main(String[] args) {

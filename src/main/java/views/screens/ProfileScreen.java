@@ -1,6 +1,7 @@
-package views;
+package views.screens;
 
 import entities.User;
+import views.controllers.CustomizationController;
 
 import javax.swing.*;
 import java.awt.*;

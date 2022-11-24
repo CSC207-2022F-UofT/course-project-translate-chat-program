@@ -5,6 +5,8 @@ import message_search_use_case.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import services.DBInitializer;
+import views.controllers.MessageSearchController;
+import views.presenters.MessageSearchPresenter;
 
 import java.io.FileNotFoundException;
 

@@ -1,4 +1,4 @@
-package views;
+package views.controllers;
 
 import audio_recorder_use_case.AudioRecorderInputBoundary;
 import audio_recorder_use_case.AudioRecorderResponse;

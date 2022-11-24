@@ -1,7 +1,11 @@
-package views;
+package views.styles;
 
 import audio_converter_use_case.AudioConvertData;
 import translate_use_case.MessageTranslateData;
+import views.screens.TranslateScreen;
+import views.controllers.AudioConvertController;
+import views.controllers.AudioRecorderController;
+import views.controllers.MessageTranslateController;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -13,7 +17,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 
-import static views.RecordButton.MTC;
+import static views.styles.RecordButton.MTC;
 
 
 public class RecordButton extends JFrame implements ActionListener {

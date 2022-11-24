@@ -7,12 +7,11 @@ import gateways.AudioRecorder;
 import gateways.MessageTranslateGoogleCloud;
 import translate_use_case.MessageTranslateInteractor;
 import translate_use_case.MessageTranslatePresenter;
-import views.AudioConvertController;
-import views.AudioRecorderController;
-import views.MessageTranslateController;
-import views.RecordButton;
+import views.controllers.AudioConvertController;
+import views.controllers.AudioRecorderController;
+import views.controllers.MessageTranslateController;
+import views.styles.RecordButton;
 
-import javax.swing.*;
 import java.io.IOException;
 
 public class TranslateScreenTest {

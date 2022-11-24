@@ -1,4 +1,4 @@
-package views;
+package views.screens;
 
 import entities.User;
 import services.DBInitializer;
