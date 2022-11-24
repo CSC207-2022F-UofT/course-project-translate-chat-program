@@ -25,23 +25,14 @@ import javax.swing.table.DefaultTableModel;
 
 
 
-public class ContactScreen extends JFrame{
+public class ContactScreen extends JPanel {
     ArrayList<MemberVO>members = new ArrayList<MemberVO>();
     DBService dbService;
 
-    public ContactScreen() throws ExecutionException, InterruptedException {
-        this.dbService = new DBService();
-        DBInitializer dbInitializer = new DBInitializer();
-        try {
-            dbInitializer.init();
-        } catch (FileNotFoundException ex) {
-            throw new RuntimeException(ex);
-        }
+    public ContactScreen(DBService db) throws ExecutionException, InterruptedException {
+        this.dbService = db;
 
-        setTitle("Contacts");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setAlwaysOnTop(true);
-        setBounds(200, 100, 400, 200);
+        this.setBounds(200, 100, 400, 200);
 
         //Columns
         String[] colNames = new String[]{"User ID"};
@@ -49,7 +40,7 @@ public class ContactScreen extends JFrame{
 
         JTable table = new JTable(model);
         JScrollPane scrollPane = new JScrollPane(table);
-        add(scrollPane, BorderLayout.CENTER);
+        this.add(scrollPane, BorderLayout.CENTER);
 
 
         //Input Panel at the bottom of the screen
@@ -85,47 +76,22 @@ public class ContactScreen extends JFrame{
             members.add(new MemberVO(contacts.get(i)));
 
         }
-
-
         model.addRow(rows);
-
         tfUserid.setText("");
-
-
-
         //members.add(new MemberVO(0L));
-
-
-
-
-
 
         btnAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                //Add
-
-
-
-
-
-
                 String[] rows = new String[2];
                 rows[0] = tfUserid.getText();
                 model.addRow(rows);
 
                 tfUserid.setText("");
-
-
                 Long userid = Long.parseLong(rows[0]);
-
-
                 User targetUser = null;
                 try {
-
                     targetUser = dbService.getUserDetails(1);
-
                 } catch (ExecutionException ex) {
                     throw new RuntimeException(ex);
                 } catch (InterruptedException ex) {
@@ -140,10 +106,7 @@ public class ContactScreen extends JFrame{
                     throw new RuntimeException(ex);
                 }
 
-
                 members.add(new MemberVO(userid));
-
-
             }
         });
 
@@ -151,29 +114,20 @@ public class ContactScreen extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Delete
-
-
                 int rowIndex = table.getSelectedRow();
                 // If rowIndex is not selected, then rowIndex is -1
-
-
             }
         });
         btnDel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
 //                DBInitializer dbInitializer = new DBInitializer();
 //                try {
 //                    dbInitializer.init();
 //                } catch (FileNotFoundException ex) {
 //                    throw new RuntimeException(ex);
 //                }
-
-
                 int rowIndex = table.getSelectedRow();
-
 
                 if (rowIndex == -1) return;
                 model.removeRow(rowIndex);
@@ -190,7 +144,6 @@ public class ContactScreen extends JFrame{
                     throw new RuntimeException(ex);
                 }
 
-
                 try {
                     dbService.deleteContact(targetUser, userid);
                 } catch (ExecutionException | InterruptedException ex) {
@@ -198,13 +151,10 @@ public class ContactScreen extends JFrame{
                 }
 
                 members.remove(rowIndex);
-
             }
         });
 
-
-
-        add(bottomPanel, BorderLayout.SOUTH);
+        this.add(bottomPanel, BorderLayout.SOUTH);
         setVisible(true);
         }
 
@@ -218,7 +168,4 @@ public class ContactScreen extends JFrame{
 
     }
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        new ContactScreen();
-    }
 }

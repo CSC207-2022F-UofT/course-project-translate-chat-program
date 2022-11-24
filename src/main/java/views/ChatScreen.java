@@ -35,7 +35,7 @@ import java.util.concurrent.ExecutionException;
 import javax.swing.*;
 import javax.swing.text.BadLocationException;
 
-public class ChatScreen {
+public class ChatScreen extends JPanel {
 
     String      appName     = "Translation Chat App";
     ChatScreen     mainGUI;
