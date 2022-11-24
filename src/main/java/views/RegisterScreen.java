@@ -122,8 +122,9 @@ public class RegisterScreen extends JPanel implements ActionListener {
                 // TODO: Navigate to next page
                 CreationData data = resp.getData();
                 if (resp.isSuccess()) {
-                    JOptionPane.showMessageDialog(this, "Creating account with paramters: \n" +
-                            data.getUsername() + "\n" + data.getPassword() + "\n" + data.getEmail() + "\n" + data.getDefault_lang() + "\n" + resp.getTime());
+                     // JOptionPane.showMessageDialog(this, "Creating account with paramters: \n" +
+                     //       data.getUsername() + "\n" + data.getPassword() + "\n" + data.getEmail() + "\n" + data.getDefault_lang() + "\n" + resp.getTime());
+                    nav.showScreen("home");
                 } else {
                     JOptionPane.showMessageDialog(this, resp.getException().getMessage());
                 }

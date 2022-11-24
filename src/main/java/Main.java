@@ -15,6 +15,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.util.HashMap;
+import java.util.concurrent.ExecutionException;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,14 +36,18 @@ public class Main {
         // Initialize screens
         JPanel registerScreen = initRegisterScreen(nav, dbs);
         JPanel loginSreen = initLoginScreen(nav, dbs);
+        JPanel chatScreen = initChatScreen(nav, dbs);
+        JPanel contactScreen = initContactScreen(nav, dbs);
+        JPanel homeScreen = initHomeScreen(0, nav, chatScreen, contactScreen);
         // Add screens to the card layout
         screens.add(registerScreen, "register");
         screens.add(loginSreen, "login");
+        screens.add(homeScreen, "home");
 
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         application.setSize(640, 640);
         application.setVisible(true);
-        nav.showScreen("register");
+        nav.showScreen("home");
     }
     @NotNull
     private static JPanel initRegisterScreen(Navigator nav, DBService db) {
@@ -81,7 +86,28 @@ public class Main {
 
     @NotNull
     private static JPanel initChatScreen(Navigator nav, DBService db) {
-        return new JPanel();
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("CHAT SCREEN"));
+        panel.setSize(400, 400);
+        panel.setMinimumSize(new Dimension(400, 400));
+        return panel;
+    }
+
+    @NotNull
+    private static JPanel initContactScreen(Navigator nav, DBService db)  {
+        try {
+            return new ContactScreen(db);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        JPanel error = new JPanel();
+        error.add(new JLabel("ERROR"));
+        return error;
+    }
+
+    @NotNull
+    private static JPanel initHomeScreen(int currUserId, Navigator nav, JPanel chatScreen, JPanel contactScreen) {
+        return new HomeScreen(currUserId, chatScreen, contactScreen, nav);
     }
 
 }

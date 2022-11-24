@@ -81,8 +81,9 @@ public class LoginScreen extends JPanel implements ActionListener {
                 LoginResponse resp = controller.login(username, password);
                 LoginData data = resp.getData();
                 if (resp.isSuccess()) {
-                    JOptionPane.showMessageDialog(this, "Log into account with paramters: \n" +
-                            data.getUsername() + "\n" + data.getPassword() + "\n" + resp.getTime());
+                    nav.showScreen("home");
+                    // JOptionPane.showMessageDialog(this, "Log into account with paramters: \n" +
+                     //       data.getUsername() + "\n" + data.getPassword() + "\n" + resp.getTime());
                 } else {
                     JOptionPane.showMessageDialog(this, resp.getException().getMessage());
                 }
