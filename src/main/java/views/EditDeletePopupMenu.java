@@ -1,5 +1,7 @@
 package views;
 
+import controllers.MessageDeleteController;
+import controllers.MessageEditController;
 import message_edit_delete_use_case.MessageDeleteData;
 import message_edit_delete_use_case.MessageEditData;
 import javax.swing.*;

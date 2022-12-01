@@ -2,6 +2,8 @@ package views;
 
 import contact_usecases.add_contact_use_case.AddContactData;
 import contact_usecases.delete_contact_use_case.DeleteContactData;
+import controllers.AddContactController;
+import controllers.DeleteContactController;
 import entities.User;
 import services.DBService;
 

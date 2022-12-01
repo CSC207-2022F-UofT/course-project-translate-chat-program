@@ -1,6 +1,7 @@
 package views;
 
 
+import controllers.MessageSearchController;
 import entities.Message;
 
 import message_search_use_case.MessageSearchData;

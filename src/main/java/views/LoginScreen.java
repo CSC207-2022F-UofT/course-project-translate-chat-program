@@ -1,5 +1,6 @@
 package views;
 
+import controllers.LoginController;
 import user_login_use_case.LoginData;
 import user_login_use_case.LoginResponse;
 

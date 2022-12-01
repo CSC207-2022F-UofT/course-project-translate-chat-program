@@ -3,6 +3,7 @@ package views;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.Firestore;
 import com.google.firebase.cloud.FirestoreClient;
+import controllers.MessageEditController;
 import gateways.MessageEditFirebaseSystem;
 import message_edit_delete_use_case.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import services.DBInitializer;
 
 import java.io.FileNotFoundException;
+import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -33,7 +35,7 @@ class MessageEditControllerTest {
         Firestore dbFirestore = FirestoreClient.getFirestore();
         controller.editMessage(new MessageEditData("bye", 3));
         DocumentReference messageref = dbFirestore.collection("messages").document("id"+3);
-        assertEquals("bye", (String) messageref.get().get().getData().get("message"));
+        assertEquals("bye", Objects.requireNonNull(messageref.get().get().getData()).get("message"));
     }
 
 

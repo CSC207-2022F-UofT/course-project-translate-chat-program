@@ -10,6 +10,7 @@ import contact_usecases.delete_contact_use_case.DeleteContactInputBoundary;
 import contact_usecases.delete_contact_use_case.DeleteContactInteractor;
 import contact_usecases.delete_contact_use_case.DeleteContactOutputBoundary;
 import contact_usecases.delete_contact_use_case.UserDeleteContactGateway;
+import controllers.*;
 import gateways.*;
 import message_edit_delete_use_case.*;
 import message_search_use_case.MessageSearchGateway;

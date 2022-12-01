@@ -1,5 +1,6 @@
 package views;
 
+import controllers.MessageTranslateController;
 import translate_use_case.MessageTranslateData;
 
 import javax.swing.*;
