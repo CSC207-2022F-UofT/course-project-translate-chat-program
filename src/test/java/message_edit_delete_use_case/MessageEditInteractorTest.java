@@ -6,9 +6,10 @@ import com.google.firebase.cloud.FirestoreClient;
 import gateways.MessageEditFirebaseSystem;
 import org.junit.jupiter.api.Test;
 import services.DBInitializer;
-import views.MessageEditPresenter;
+import presenters.MessageEditPresenter;
 
 import java.io.FileNotFoundException;
+import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -25,7 +26,7 @@ class MessageEditInteractorTest {
         Firestore dbFirestore = FirestoreClient.getFirestore();
         interactor.editMessage(new MessageEditData("bye", 3));
         DocumentReference messageref = dbFirestore.collection("messages").document("id"+3);
-        assertEquals("bye", (String) messageref.get().get().getData().get("message"));
+        assertEquals("bye", Objects.requireNonNull(messageref.get().get().getData()).get("message"));
     }
 
 

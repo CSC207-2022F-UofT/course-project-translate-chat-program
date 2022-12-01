@@ -1,5 +1,6 @@
 package views;
 
+import controllers.UserRegisterController;
 import user_register_use_case.CreationData;
 import user_register_use_case.RegisterResponse;
 

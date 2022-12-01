@@ -8,6 +8,7 @@ import gateways.MessageDeleteFirebaseSystem;
 import message_edit_delete_use_case.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import presenters.MessageDeletePresenter;
 import services.DBInitializer;
 
 import java.io.FileNotFoundException;

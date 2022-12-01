@@ -1,4 +1,4 @@
-package views;
+package presenters;
 
 import contact_usecases.add_contact_use_case.AddContactFailed;
 import contact_usecases.add_contact_use_case.AddContactOutputBoundary;

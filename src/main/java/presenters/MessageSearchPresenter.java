@@ -1,4 +1,4 @@
-package views;
+package presenters;
 
 import message_search_use_case.MessageSearchFailed;
 import message_search_use_case.MessageSearchOutputBoundary;

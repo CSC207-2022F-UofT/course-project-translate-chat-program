@@ -5,6 +5,7 @@ import gateways.MessageSearchFirebaseSystem;
 import message_search_use_case.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import presenters.MessageSearchPresenter;
 import services.DBInitializer;
 
 import java.io.FileNotFoundException;

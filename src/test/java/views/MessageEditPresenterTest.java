@@ -6,6 +6,7 @@ import message_edit_delete_use_case.MessageEditFailed;
 import message_edit_delete_use_case.MessageEditResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import presenters.MessageEditPresenter;
 
 import java.util.ArrayList;
 import java.util.Date;
