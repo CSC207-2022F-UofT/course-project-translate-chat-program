@@ -4,6 +4,10 @@ import entities.Message;
 
 import java.util.List;
 
+/**
+ * Implementation of MessageSearchInputBoundary that searches for messages, based on some data.
+ * @author Muhammad Muzammil
+ */
 public class MessageSearchInteractor implements MessageSearchInputBoundary {
 
     final MessageSearchGateway gateway;

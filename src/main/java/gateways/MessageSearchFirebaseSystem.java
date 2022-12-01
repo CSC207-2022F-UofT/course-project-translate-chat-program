@@ -15,6 +15,11 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
+/**
+ * Implementation of the MessageSearchGateway interface that searches through the remote Firebase database and gets
+ * a list of Message entities matching some input data.
+ * @author Muhammad Muzammil
+ */
 public class MessageSearchFirebaseSystem implements MessageSearchGateway {
 
     /**

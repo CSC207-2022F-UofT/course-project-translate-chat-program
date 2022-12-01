@@ -13,6 +13,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+/**
+ * JPanel extension that is basically a search bar that will open a new window displaying the results of a search
+ * request.
+ * @author Muhammad Muzammil
+ */
 public class SearchBarPanel extends JPanel implements ActionListener {
 
     HintTextField searchText = new HintTextField("Search messages...");

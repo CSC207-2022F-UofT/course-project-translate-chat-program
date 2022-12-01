@@ -1,5 +1,9 @@
 package message_search_use_case;
 
+/**
+ * Represents the input data for the message_search_use_case
+ * @author Muhammad Muzammil
+ */
 public class MessageSearchData {
     private final String text;
     private final int chatId;

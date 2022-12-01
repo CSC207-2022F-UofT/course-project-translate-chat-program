@@ -4,6 +4,10 @@ import message_search_use_case.MessageSearchFailed;
 import message_search_use_case.MessageSearchOutputBoundary;
 import message_search_use_case.MessageSearchResponse;
 
+/**
+ * Implementation of MessageSearchOutputBoundary to let the view know whether the search request has succeeded or failed
+ * @author Muhammad Muzammil
+ */
 public class MessageSearchPresenter implements MessageSearchOutputBoundary {
 
     /**

@@ -1,5 +1,9 @@
 package message_search_use_case;
 
+/**
+ * Interface for the MessageSearchInteractor to use to inform the view of either a success or failure.
+ * @author Muhammad Muzammil
+ */
 public interface MessageSearchOutputBoundary {
 
     /**

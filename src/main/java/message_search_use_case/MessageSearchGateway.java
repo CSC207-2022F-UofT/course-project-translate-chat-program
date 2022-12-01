@@ -4,6 +4,10 @@ import entities.Message;
 
 import java.util.List;
 
+/**
+ * Interface for the gateway which will allow the MessageSearchInteractor to get the messages that match the search data.
+ * @author Muhammad Muzammil
+ */
 public interface MessageSearchGateway {
     /**
      * Searches for messages in database that match text in data

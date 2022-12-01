@@ -5,6 +5,11 @@ import shared.Response;
 
 import java.util.List;
 
+/**
+ * Response model that will be the return value of the MessageSearchController's search method. This will allow the view
+ * to have a list of Message entities to display as a search result.
+ * @author Muhammad Muzammil
+ */
 public class MessageSearchResponse extends Response {
     private final String text;
     private final List<Message> messages;
