@@ -2,7 +2,6 @@ package views;
 
 import entities.Message;
 import entities.User;
-import message_search_use_case.MessageSearchData;
 import message_search_use_case.MessageSearchFailed;
 import message_search_use_case.MessageSearchResponse;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,6 +13,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit test for MessageSearchPresenter
+ * @author Muhammad Muzammil
+ */
 class MessageSearchPresenterTest {
     private MessageSearchPresenter presenter;
 
@@ -22,6 +25,9 @@ class MessageSearchPresenterTest {
         this.presenter = new MessageSearchPresenter();
     }
 
+    /**
+     * Test for prepareSuccessView().
+     */
     @Test
     void prepareSuccessView() {
         List<Message> listMsg = new ArrayList<>();
@@ -33,12 +39,13 @@ class MessageSearchPresenterTest {
         assertEquals(response, presenter.prepareSuccessView(response));
     }
 
+    /**
+     * Test for prepareFailView().
+     */
     @Test
     void prepareFailView() {
         String error = "There has been an error!";
-        Exception e = assertThrows(MessageSearchFailed.class, () -> {
-            presenter.prepareFailView(error);
-        });
+        Exception e = assertThrows(MessageSearchFailed.class, () -> presenter.prepareFailView(error));
         assertEquals(error, e.getMessage());
     }
 }

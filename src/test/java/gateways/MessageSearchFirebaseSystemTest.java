@@ -14,11 +14,18 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit test for MessageSearchFirebaseSystem.
+ * @author Muhammad Muzammil
+ */
 class MessageSearchFirebaseSystemTest {
-    private MessageSearchFirebaseSystem gateway = new MessageSearchFirebaseSystem();
+    private final MessageSearchFirebaseSystem gateway = new MessageSearchFirebaseSystem();
     DBInitializer dbInitializer = new DBInitializer();
 
-
+    /**
+     * Test for search() method - List returned has some number of Message entities.
+     * @throws FileNotFoundException if initializer failed to initialize for some reason.
+     */
     @Test
     void searchFoundMatch() throws FileNotFoundException {
         dbInitializer.init();
@@ -26,6 +33,9 @@ class MessageSearchFirebaseSystemTest {
         assertEquals(2, listMsg.size());
     }
 
+    /**
+     * Test for search() method - List returned is empty.
+     */
     @Test
     void searchFoundNoMatch() {
         List<Message> listMsg = gateway.search(new MessageSearchData("Hello!", 1));

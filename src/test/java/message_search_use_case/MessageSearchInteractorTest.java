@@ -10,6 +10,10 @@ import java.io.FileNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit test for MessageSearchInteractor.
+ * @author Muhammad Muzammil
+ */
 class MessageSearchInteractorTest {
     private MessageSearchInteractor interactor;
     DBInitializer initializer = new DBInitializer();
@@ -21,33 +25,40 @@ class MessageSearchInteractorTest {
         this.interactor = new MessageSearchInteractor(gateway, presenter);
     }
 
+    /**
+     * Test for search() method - Failure when no messages match the search data.
+     * @throws FileNotFoundException if initializer failed to initialize for some reason.
+     */
     @Test
     void searchFailedNoMatch() throws FileNotFoundException {
         initializer.init();
-        Exception e = assertThrows(MessageSearchFailed.class, () -> {
-            interactor.search(new MessageSearchData("jkiojgfhhg", 0));
-        });
+        Exception e = assertThrows(MessageSearchFailed.class, () -> interactor.search(new MessageSearchData("jkiojgfhhg", 0)));
         assertEquals("No messages match that search query.", e.getMessage());
     }
 
+    /**
+     * Test for search() method - Failure when search data is just blank.
+     */
     @Test
     void searchFailedBlank() {
-        Exception e = assertThrows(MessageSearchFailed.class, () -> {
-            interactor.search(new MessageSearchData("   ", 0));
-        });
+        Exception e = assertThrows(MessageSearchFailed.class, () -> interactor.search(new MessageSearchData("   ", 0)));
         assertEquals("Search query can't be blank.", e.getMessage());
     }
 
+    /**
+     * Test for search() method - Failure when search data is too short.
+     */
     @Test
     void searchFailedLessThanOrEqualToFive() {
-        Exception e = assertThrows(MessageSearchFailed.class, () -> {
-            interactor.search(new MessageSearchData("Bonj", 0));
-        });
+        Exception e = assertThrows(MessageSearchFailed.class, () -> interactor.search(new MessageSearchData("Bonj", 0)));
         assertEquals("Search query must be more than 5 characters.", e.getMessage());
     }
 
+    /**
+     * Test for search() method - Success
+     */
     @Test
-    void searchSuccess() throws FileNotFoundException {
+    void searchSuccess() {
         MessageSearchResponse actualResponse = interactor.search(new MessageSearchData("Hello!", 0));
         assertEquals(1, actualResponse.getMessages().size());
         assertEquals("Hello!", actualResponse.getMessages().get(0).getMessage());

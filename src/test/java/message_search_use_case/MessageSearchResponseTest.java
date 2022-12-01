@@ -11,6 +11,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit test for MessageSearchResponse
+ * @author Muhammad Muzammil
+ */
 class MessageSearchResponseTest {
     private MessageSearchResponse response;
     private List<Message> listMsg;
@@ -26,16 +30,25 @@ class MessageSearchResponseTest {
         this.response = new MessageSearchResponse("Hello", listMsg, true, null);
     }
 
+    /**
+     * Test for getText() method.
+     */
     @Test
     void getText() {
         assertEquals("Hello", response.getText());
     }
 
+    /**
+     * Test for getException() method
+     */
     @Test
     void getException() {
         assertNull(response.getException());
     }
 
+    /**
+     * Test for getMessages() method.
+     */
     @Test
     void getMessages() {
         assertEquals(listMsg, response.getMessages());
