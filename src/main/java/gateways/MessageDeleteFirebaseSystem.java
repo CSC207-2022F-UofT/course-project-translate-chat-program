@@ -10,7 +10,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
+/**
+ * The firebase system class for the message delete use case.
+ */
 public class MessageDeleteFirebaseSystem implements MessageDeleteGateway {
+    /**
+     * Message deleting method for MessageDeleteFirebaseSystem.
+     *
+     * @param data the data class of the message to be deleted
+     */
     @Override
     public void delete(MessageDeleteData data) {
         int messageID = data.getMessageID();
@@ -23,6 +31,7 @@ public class MessageDeleteFirebaseSystem implements MessageDeleteGateway {
         try {
             DocumentSnapshot chatDoc = chatRef.get().get();
             Map<String,Object> chatData = chatDoc.getData();
+            assert chatData != null;
             List<DocumentReference> messages = (List<DocumentReference>) chatData.get("messages");
             messages.remove(messageRef);
             chatRef.set(chatData);

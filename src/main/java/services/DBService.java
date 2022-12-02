@@ -67,7 +67,9 @@ public class DBService {
         String docInfo = "id" + user.getUser_id();
         user.setDefault_lang(newDefaultLang);
         DocumentReference docRef = dbFirestore.collection("users").document(docInfo);
+
         docRef.update("default_lang", user.getDefault_lang());
+
     }
     public void updateName(User user, String name) {
         Firestore dbFirestore = FirestoreClient.getFirestore();
@@ -99,6 +101,7 @@ public class DBService {
             throw new RuntimeException(e);
         }
     }
+
 
 
 

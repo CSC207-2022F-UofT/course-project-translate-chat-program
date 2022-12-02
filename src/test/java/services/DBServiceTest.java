@@ -30,7 +30,7 @@ class DBServiceTest {
     // Sets up a fake user in the database before each test
     @BeforeEach
     void setup() throws InterruptedException {
-        User newUser = new User("NewUser", "english", "email@email.com", "password");
+        User newUser = new User("NewUser", "english", "email@email.com", "password",1);
         newUser.setUser_id(6);
         db.collection("users").document("id6").set(newUser);
         // This just pauses execution for 1 second so that the database
@@ -47,7 +47,7 @@ class DBServiceTest {
 
     @Test
     void saveUserDetails() throws ExecutionException, InterruptedException {
-        User newUser = new User("NewUser2", "english", "email", "password");
+        User newUser = new User("NewUser2", "english", "email", "password",1);
         newUser.setUser_id(7);
         dbs.saveUserDetails(newUser);
         assert !db.collection("users").whereEqualTo("name", "NewUser").get().get().isEmpty();

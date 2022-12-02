@@ -4,12 +4,16 @@ import controllers.MessageDeleteController;
 import controllers.MessageEditController;
 import message_edit_delete_use_case.MessageDeleteData;
 import message_edit_delete_use_case.MessageEditData;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+/**
+ *View class for Edit, Delete pop up menu
+ */
 public class EditDeletePopupMenu extends JPopupMenu {
     JMenuItem edit;
     JMenuItem delete;

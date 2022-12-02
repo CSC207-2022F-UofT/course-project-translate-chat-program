@@ -25,7 +25,7 @@ class MessageEditInteractorTest {
         Firestore dbFirestore = FirestoreClient.getFirestore();
         interactor.editMessage(new MessageEditData("bye", 3));
         DocumentReference messageref = dbFirestore.collection("messages").document("id"+3);
-        assertEquals("bye", (String) messageref.get().get().getData().get("message"));
+        assertEquals("bye", messageref.get().get().getData().get("message"));
     }
 
 

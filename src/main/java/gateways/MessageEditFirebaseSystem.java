@@ -9,8 +9,15 @@ import com.google.cloud.firestore.DocumentSnapshot;
 
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
-
+/**
+ * The firebase system class for the message edit use case.
+ */
 public class MessageEditFirebaseSystem implements MessageEditGateway {
+    /**
+     * Message editing method for MessageEditFirebaseSystem.
+     *
+     * @param data the data class of the message to be edited.
+     */
 
     @Override
     public void edit(MessageEditData data) {

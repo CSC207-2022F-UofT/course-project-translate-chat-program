@@ -22,8 +22,8 @@ class UserRegistrationFirebaseSystemTest {
 
     static private UserRegistrationFirebaseSystem registerFirebaseSystem;
     static private DBService db;
-    static private final User danny = new User("danny", "en", "danny@gmail.com", " 123");
-    static private final User alfred = new User("alfred", "en", "alfred@gmail.com", "alfred");
+    static private final User danny = new User("danny", "en", "danny@gmail.com", " 123", 1);
+    static private final User alfred = new User("alfred", "en", "alfred@gmail.com", "alfred", 2);
     static private CreationData goodData;
     static private CreationData badData;
 
