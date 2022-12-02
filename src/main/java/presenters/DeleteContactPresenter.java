@@ -1,4 +1,4 @@
-package views;
+package presenters;
 
 import contact_usecases.delete_contact_use_case.DeleteContactFailed;
 import contact_usecases.delete_contact_use_case.DeleteContactOutputBoundary;

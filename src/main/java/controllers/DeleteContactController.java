@@ -1,4 +1,4 @@
-package views;
+package controllers;
 
 import contact_usecases.delete_contact_use_case.DeleteContactData;
 import contact_usecases.delete_contact_use_case.DeleteContactInputBoundary;

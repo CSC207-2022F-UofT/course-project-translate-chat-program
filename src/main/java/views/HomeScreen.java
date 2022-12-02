@@ -1,5 +1,9 @@
 package views;
 
+import controllers.AddContactController;
+import controllers.CustomizationController;
+import controllers.DeleteContactController;
+import controllers.SendMessageController;
 import entities.User;
 
 import javax.swing.*;

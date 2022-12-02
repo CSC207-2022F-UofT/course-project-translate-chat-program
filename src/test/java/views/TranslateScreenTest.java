@@ -2,15 +2,14 @@ package views;
 
 import audio_converter_use_case.*;
 import audio_recorder_use_case.*;
+import controllers.AudioRecorderController;
+import controllers.MessageTranslateController;
 import gateways.AudioConvertGoogleCloud;
 import gateways.AudioRecorder;
 import gateways.MessageTranslateGoogleCloud;
 import translate_use_case.MessageTranslateInteractor;
 import translate_use_case.MessageTranslatePresenter;
-import views.AudioConvertController;
-import views.AudioRecorderController;
-import views.MessageTranslateController;
-import views.RecordButton;
+import controllers.AudioConvertController;
 
 import javax.swing.*;
 import java.io.IOException;

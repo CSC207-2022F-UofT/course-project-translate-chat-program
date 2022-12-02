@@ -1,4 +1,4 @@
-package views;
+package controllers;
 
 import contact_usecases.add_contact_use_case.AddContactData;
 import contact_usecases.add_contact_use_case.AddContactInputBoundary;

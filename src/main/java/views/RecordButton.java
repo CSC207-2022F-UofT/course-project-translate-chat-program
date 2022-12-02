@@ -1,10 +1,12 @@
 package views;
 
 import audio_converter_use_case.AudioConvertData;
+import controllers.AudioConvertController;
+import controllers.AudioRecorderController;
+import controllers.MessageTranslateController;
 import translate_use_case.MessageTranslateData;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

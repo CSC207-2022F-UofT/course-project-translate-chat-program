@@ -1,4 +1,4 @@
-package views;
+package controllers;
 
 import message_search_use_case.MessageSearchData;
 import message_search_use_case.MessageSearchInputBoundary;
@@ -11,7 +11,7 @@ public class MessageSearchController {
         this.messageSearchInput = messageSearchInput;
     }
 
-    MessageSearchResponse search(MessageSearchData data) {
+    public MessageSearchResponse search(MessageSearchData data) {
         return this.messageSearchInput.search(data);
     }
 }
